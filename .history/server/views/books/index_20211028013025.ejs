@@ -19,20 +19,18 @@
                   <th class="text-center">Published</th>
                   <th class="text-center">Category</th>
                   <th class="text-center">Price</th>
-                  <th class="text-center"></th>
-                  <th class="text-center"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- Template Row -->
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
-                  <td class="text-center"><%= books[count].title %></td>
-                  <td class="text-center"><%= books[count].author %></td>
-                  <td class="text-center"><%= books[count].published %></td>
-                  <td class="text-center"><%= books[count].category %></td>
-                  <td class="text-center"><%= books[count].price %></td>
-                  
+                  <td><%= books[count].Title %></td>
+                  <td class="text-center">$<%= books[count].Price %></td>
+                  <td class="text-center"><%= books[count].Author %></td>
+                  <td class="text-center"><%= books[count].Genre %></td>
+
+                  <td class="text-center">
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->

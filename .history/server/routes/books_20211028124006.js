@@ -15,12 +15,12 @@ router.get('/', (req, res, next) => {
       return console.error(err);
     }
     else {
-      res.render('books/index', {
-          title: 'Books',
-          books: books 
+      //res.render('books/index', {
+       // title: 'Books',
+       // books: books 
        
-     });
-     
+     // });
+     console.log(books)
     }
   });
 
@@ -32,10 +32,7 @@ router.get('/:id', (req, res, next) => {
   /*****************
    * ADD CODE HERE *
    *****************/
-
-
 });
-
 
 
 // POST process the Book Details page and create a new Book - CREATE

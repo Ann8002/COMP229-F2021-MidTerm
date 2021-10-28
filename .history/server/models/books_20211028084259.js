@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 // create a model class
-let Book = mongoose.Schema({
+let book = mongoose.Schema({
     title: String,
     author: String,
     published: String,

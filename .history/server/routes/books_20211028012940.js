@@ -2,7 +2,6 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-const books = require('../models/books');
 
 // define the book model
 let book = require('../models/books');
@@ -16,27 +15,23 @@ router.get('/', (req, res, next) => {
     }
     else {
       res.render('books/index', {
-          title: 'Books',
-          books: books 
-       
-     });
-     
+        title: 'Books',
+        books: books 
+      
+      });
     }
   });
 
 });
 
 //  GET the Book Details page in order to add a new Book
-router.get('/:id', (req, res, next) => {
+router.get('/add', (req, res, next) => {
 
-  /*****************
-   * ADD CODE HERE *
-   *****************/
-
+    /*****************
+     * ADD CODE HERE *
+     *****************/
 
 });
-
-
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {

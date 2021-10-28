@@ -14,6 +14,7 @@
             <table class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
+                  <th>Title</th>
                   <th class="text-center">Title</th>
                   <th class="text-center">Author</th>
                   <th class="text-center">Published</th>
@@ -27,7 +28,8 @@
                 <!-- Template Row -->
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
-                  <td class="text-center"><%= books[count].title %></td>
+                  <td><%= books[count].Title %></td>
+                  <td class="text-center">$<%= books[count].name %></td>
                   <td class="text-center"><%= books[count].author %></td>
                   <td class="text-center"><%= books[count].published %></td>
                   <td class="text-center"><%= books[count].category %></td>

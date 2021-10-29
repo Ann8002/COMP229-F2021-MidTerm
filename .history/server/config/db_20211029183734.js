@@ -9,5 +9,5 @@ module.exports =
   //"URI": "mongodb://localhost/bookstore"
   
   // MongoDB Atlas
-  "URI": "mongodb+srv://sindhu:g87Hb4Nm05XxPD7p@bookstore.6nuiu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  RemoteURI = "mongodb+srv://sindhu:g87Hb4Nm05XxPD7p@bookstore.6nuiu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 };

@@ -6,8 +6,6 @@
 module.exports = 
 {
   //local MongoDB deployment ->
-  //"URI": "mongodb://localhost/bookstore"
-  
-  // MongoDB Atlas
-  "URI": "mongodb+srv://sindhu:g87Hb4Nm05XxPD7p@bookstore.6nuiu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "URI": "mongodb://remotehost/bookstore"
+  RemoteURI = "mongodb+srv://sindhu:g87Hb4Nm05XxPD7p@bookstore.6nuiu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 };

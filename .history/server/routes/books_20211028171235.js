@@ -1,8 +1,3 @@
-// File Name: COMP229-F2021-MidTerm-301150331
-// Author's Name: Sindhu Binil
-// StudentID: 301150331
-// Web App Name: comp229-f2021-mt-301150331
-
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -19,8 +14,7 @@ router.get('/', (req, res, next) => {
     if (err) {
       return console.error(err);
     }
-    else 
-    {
+    else {
       res.render('books/index', {
           title: 'Books',
           books: books 
@@ -34,22 +28,23 @@ router.get('/', (req, res, next) => {
 
 //  GET the Book Details page in order to add a new Book
 router.get('/:id', (req, res, next) => {
-  res.render('books/details', {title: 'Add Book'})
+  res.render('books/add', {title: 'Add Book'})
 
 });
 
 
 // POST process the Book Details page and create a new Book - CREATE
-router.post('/details', (req, res, next) => {
-    let newBooks = books({
+router.post('/add', (req, res, next) => {
+    let newBooks = Books({
       "title": req.body.title,
       "author": req.body.author,
       "published": req.body.published,
+      "category": req.body.published,
       "category": req.body.category,
       "price": req.body.price
     });
     
-    books.create(newBooks, (err, books) => {
+    Books.create(neBooks, (err, Books) =>{
         if(err)
         {
           console.log(err);
@@ -68,7 +63,7 @@ router.post('/details', (req, res, next) => {
 router.get('/edit/:id', (req, res, next) => {
   let id = req.params.id;
 
-  books.findById(id, (err, booksToEdit) => {
+  Books.findById(id, (err, booksToEdit) => {
     if(err)
     {
       console.log(err);
@@ -77,32 +72,32 @@ router.get('/edit/:id', (req, res, next) => {
     else
     {
       //show the edit view
-      res.render('books/edit', {title: 'Edit Books', books: booksToEdit})
+      res.render('books/edit', {title: "Edit Books', books: booksToEdit"})
     }
-  });
+  })
 });
 
 // POST - process the information passed from the details form and update the document
 router.post('/edit/:id', (req, res, next) => {
     let id = req.params.id
 
-    let updatedBooks = books({
+    let updatedBooks = Books({
      "_id": id,
      "title": req.body.title,
      "author": req.body.author,
      "published": req.body.published,
+     "category": req.body.published,
      "category": req.body.category,
      "price": req.body.price
     });
 
-    books.updateOne({_id: id}, updatedBooks, (err) => {
+    Books.updatedOne({_id: id}, updatedBooks, (err) => {
       if(err)
       {
         console.log(err);
         res.end(err);
       }
-      else
-      {
+      else{
         //refresh the books 
         res.redirect('/books');
       }
@@ -112,20 +107,10 @@ router.post('/edit/:id', (req, res, next) => {
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
-    let id = req.params.id;
 
-    books.remove({_id: id}, (err) => {
-      if(err)
-      {
-        console.log(err);
-        res.end(err);
-      }
-      else
-      {
-        //refresh the books 
-        res.redirect('/books');
-      }
-    });
+    /*****************
+     * ADD CODE HERE *
+     *****************/
 });
 
 

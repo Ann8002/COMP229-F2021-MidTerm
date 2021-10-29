@@ -1,8 +1,3 @@
-// File Name: COMP229-F2021-MidTerm-301150331
-// Author's Name: Sindhu Binil
-// StudentID: 301150331
-// Web App Name: comp229-f2021-mt-301150331
-
 let app = require('./server/config/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
 let http = require('http');

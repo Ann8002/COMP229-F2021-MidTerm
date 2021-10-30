@@ -1,8 +1,3 @@
-// File Name: COMP229-F2021-MidTerm-301150331
-// Author's Name: Sindhu Binil
-// StudentID: 301150331
-// Web App Name: comp229-f2021-mt-301150331
-
 /* custom JS goes here */
 
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
@@ -111,15 +106,15 @@ $.fn.pageMe = function(opts){
 
 /* IIFE */
 (function(){
-    $(".btn-danger").click(function(event){
-      if(!confirm("Are you sure?")) {
-        event.preventDefault();
-        window.location.assign("/books");
-      }
-    }); 
-  
-   /* pagination code */
-    $('#myTable').pageMe(
-      {pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:6}
-      );
-  })(); 
+  $(".btn-danger").click(function(event){
+    if(!confirm("Are you sure?")) {
+      event.preventDefault();
+      window.location.assign("/");
+    }
+  }); 
+
+ /* pagination code */
+  $('#myTable').pageMe(
+    {pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:6}
+    );
+})(); 

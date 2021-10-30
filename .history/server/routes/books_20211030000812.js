@@ -114,7 +114,9 @@ router.post('/edit/:id', (req, res, next) => {
 router.get('/delete/:id', (req, res, next) => {
     let id = req.params.id;
 
-      book.remove({_id: id}, (err) => {
+    let bookToDelete = book;
+
+    book.remove({_id: id}, bookToDelete, (err) => {
       if(err)
       {
         console.log(err);

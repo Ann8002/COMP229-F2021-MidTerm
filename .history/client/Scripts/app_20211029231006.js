@@ -106,7 +106,7 @@ $.fn.pageMe = function(opts){
 
 /* IIFE */
 (function(){
-  $(".btn-danger").trigger(function(event){
+  $(".btn-danger").click(function(event){
     if(!confirm("Are you sure?")) {
       event.preventDefault();
       window.location.assign("/books");
